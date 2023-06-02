@@ -39,14 +39,14 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function game() {
+  let playerScore = 0;
+  let computerScore = 0;
   for (i = 0; i < 5; i++) {
-    let playerScore = 0;
-    let computerScore = 0;
     let playerChoice = prompt("Please choose a move.").toLowerCase();
     let result = playRound(playerChoice, getComputerChoice());
     let resultString = "You";
     if (result === "win") {
-      playerChoice++;
+      playerScore++;
       resultString = resultString + " win ";
     } else if (result === "lose") {
       computerScore++;
