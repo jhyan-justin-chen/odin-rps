@@ -57,13 +57,13 @@ function game() {
     resultString = resultString + "the round.";
   }
   if (playerScore > computerScore) {
-    resultString = resultString + "You win the game.";
+    console.log("You win the game.");
     return "win";
   } else if (playerScore === computerScore) {
-    resultString = resultString + "You tie the game.";
+    console.log("You tie the game.");
     return "tie";
   } else {
-    resultString = resultString + "You lose the game.";
+    console.log("You lose the game.");
     return "loss";
   }
 }
