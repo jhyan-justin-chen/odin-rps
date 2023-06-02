@@ -37,3 +37,33 @@ function playRound(playerChoice, computerChoice) {
     }
   }
 }
+
+function game() {
+  for (i = 0; i < 5; i++) {
+    let playerScore = 0;
+    let computerScore = 0;
+    let playerChoice = prompt("Please choose a move.").toLowerCase();
+    let result = playRound(playerChoice, getComputerChoice());
+    let resultString = "You";
+    if (result === "win") {
+      playerChoice++;
+      resultString = resultString + " win ";
+    } else if (result === "lose") {
+      computerScore++;
+      resultString = resultString + " lose ";
+    } else {
+      resultString = resultString + " tie ";
+    }
+    resultString = resultString + "the round.";
+  }
+  if (playerScore > computerScore) {
+    resultString = resultString + "You win the game.";
+    return "win";
+  } else if (playerScore === computerScore) {
+    resultString = resultString + "You tie the game.";
+    return "tie";
+  } else {
+    resultString = resultString + "You lose the game.";
+    return "loss";
+  }
+}
