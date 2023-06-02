@@ -10,4 +10,30 @@ function getComputerChoice() {
   }
 }
 
-
+function playRound(playerChoice, computerChoice) {
+  if (playerChoice === "rock") {
+    if (computerChoice === "rock") {
+      return "tie";
+    } else if (computerChoice === "paper") {
+      return "lose";
+    } else {
+      return "win";
+    }
+  } else if (playerChoice === "paper") {
+    if (computerChoice === "paper") {
+      return "tie";
+    } else if (computerChoice === "scissors") {
+      return "lose";
+    } else {
+      return "win";
+    }
+  } else {
+    if (computerChoice === "scissors") {
+      return "tie";
+    } else if (computerChoice === "rock") {
+      return "lose";
+    } else {
+      return "win";
+    }
+  }
+}
