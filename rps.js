@@ -42,7 +42,11 @@ function game() {
   let playerScore = 0;
   let computerScore = 0;
   for (i = 0; i < 5; i++) {
-    let playerChoice = prompt("Please choose a move.").toLowerCase();
+    let playerChoice;
+    while (!["rock", "paper", "scissors"].includes(playerChoice)) {
+      console.log("Please type rock, paper, or scissors.");
+      playerChoice = prompt("Please choose a move.").toLowerCase();
+    }
     let result = playRound(playerChoice, getComputerChoice());
     let resultString = "You";
     if (result === "win") {
