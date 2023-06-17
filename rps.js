@@ -38,6 +38,15 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
+const inputButtons = document.querySelectorAll(".controls__input");
+inputButtons.forEach((button) => {
+  button.addEventListener("mousedown", (e) =>
+    console.log(
+      playRound(e.target.textContent.toLowerCase(), getComputerChoice())
+    )
+  );
+});
+
 // function game() {
 //   let playerScore = 0;
 //   let computerScore = 0;
