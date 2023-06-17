@@ -46,9 +46,9 @@ inputButtons.forEach((button) => {
     const computerChoice = getComputerChoice();
     const roundResult = playRound(playerChoice, computerChoice);
 
-    const playerRoundUI = document.querySelector(".results__player");
-    const computerRoundUI = document.querySelector(".results__computer");
-    const roundResultUI = document.querySelector(".results__round");
+    const playerRoundUI = document.querySelector(".round__player__result");
+    const computerRoundUI = document.querySelector(".round__computer__result");
+    const roundResultUI = document.querySelector(".round__winner");
     playerRoundUI.textContent = playerChoice.toUpperCase();
     computerRoundUI.textContent = computerChoice.toUpperCase();
     roundResultUI.textContent = roundResult.toUpperCase();
