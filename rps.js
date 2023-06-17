@@ -38,13 +38,21 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
+
 const inputButtons = document.querySelectorAll(".controls__input");
 inputButtons.forEach((button) => {
-  button.addEventListener("mousedown", (e) =>
-    console.log(
-      playRound(e.target.textContent.toLowerCase(), getComputerChoice())
-    )
-  );
+  button.addEventListener("mousedown", (e) => {
+    const playerChoice = e.target.textContent.toLowerCase();
+    const computerChoice = getComputerChoice();
+    const roundResult = playRound(playerChoice, computerChoice);
+
+    const playerRoundUI = document.querySelector(".results__player");
+    const computerRoundUI = document.querySelector(".results__computer");
+    const roundResultUI = document.querySelector(".results__round");
+    playerRoundUI.textContent = playerChoice.toUpperCase();
+    computerRoundUI.textContent = computerChoice.toUpperCase();
+    roundResultUI.textContent = roundResult.toUpperCase();
+  });
 });
 
 // function game() {
