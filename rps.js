@@ -38,37 +38,37 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
-  for (i = 0; i < 5; i++) {
-    let playerChoice;
-    while (!["rock", "paper", "scissors"].includes(playerChoice)) {
-      console.log("Please type rock, paper, or scissors.");
-      playerChoice = prompt("Please choose a move.").toLowerCase();
-    }
-    let result = playRound(playerChoice, getComputerChoice());
-    let resultString = "You";
-    if (result === "win") {
-      playerScore++;
-      resultString = resultString + " win ";
-    } else if (result === "lose") {
-      computerScore++;
-      resultString = resultString + " lose ";
-    } else {
-      resultString = resultString + " tie ";
-    }
-    resultString = resultString + "the round.";
-    console.log(resultString);
-  }
-  if (playerScore > computerScore) {
-    console.log("You win the game.");
-    return "win";
-  } else if (playerScore === computerScore) {
-    console.log("You tie the game.");
-    return "tie";
-  } else {
-    console.log("You lose the game.");
-    return "loss";
-  }
-}
+// function game() {
+//   let playerScore = 0;
+//   let computerScore = 0;
+//   for (i = 0; i < 5; i++) {
+//     let playerChoice;
+//     while (!["rock", "paper", "scissors"].includes(playerChoice)) {
+//       console.log("Please type rock, paper, or scissors.");
+//       playerChoice = prompt("Please choose a move.").toLowerCase();
+//     }
+//     let result = playRound(playerChoice, getComputerChoice());
+//     let resultString = "You";
+//     if (result === "win") {
+//       playerScore++;
+//       resultString = resultString + " win ";
+//     } else if (result === "lose") {
+//       computerScore++;
+//       resultString = resultString + " lose ";
+//     } else {
+//       resultString = resultString + " tie ";
+//     }
+//     resultString = resultString + "the round.";
+//     console.log(resultString);
+//   }
+//   if (playerScore > computerScore) {
+//     console.log("You win the game.");
+//     return "win";
+//   } else if (playerScore === computerScore) {
+//     console.log("You tie the game.");
+//     return "tie";
+//   } else {
+//     console.log("You lose the game.");
+//     return "loss";
+//   }
+// }
