@@ -81,6 +81,9 @@ function finishGame(playerScore, computerScore) {
   } else {
     winnerGameUI.textContent = "Computer Wins";
   }
+  inputButtons.forEach((button) => {
+    button.removeEventListener("mousedown", playRound);
+  });
 }
 
 let playerScore = 0;
