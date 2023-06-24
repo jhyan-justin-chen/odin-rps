@@ -1,0 +1,63 @@
+body {
+  background-color: lightblue;
+  display: flex;
+  flex-flow: column;
+}
+
+.display {
+  display: flex;
+  flex-flow: column;
+}
+
+.round {
+  margin-top: 10vh;
+  display: flex;
+  flex-flow: row;
+}
+
+.round__winner {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+.round__player {
+  flex: 1 0 auto;
+  text-align: right;
+}
+
+.round__computer {
+  flex: 1 0 auto;
+  text-align: left;
+}
+
+.game {
+  margin-top: 10vh;
+  display: flex;
+  flex-flow: flow;
+}
+
+.game__winner {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+.game__player {
+  flex: 1 0 auto;
+  text-align: right;
+}
+
+.game__computer {
+  flex: 1 0 auto;
+  text-align: left;
+}
+
+.controls {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.controls__input {
+  padding: 100px;
+  background-color: greenyellow;
+}

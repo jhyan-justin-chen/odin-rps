@@ -4,8 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="rps.js"></script>
+    <script type="text/javascript" src="rps.js" defer></script>
+    <link rel="stylesheet" href="main.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="display">
+      <div class="round">
+        <div class="round__player">
+          <div class="round__player__title">Player:</div>
+          <div class="round__player__result"></div>
+        </div>
+        <div class="round__winner"></div>
+        <div class="round__computer">
+          <div class="round__computer__title">Computer:</div>
+          <div class="round__computer__result"></div>
+        </div>
+      </div>
+
+      <div class="game">
+        <div class="game__player">
+          <div class="game__player__title">Player:</div>
+          <div class="game__player__result"></div>
+        </div>
+        <div class="game__winner"></div>
+        <div class="game__computer">
+          <div class="game__computer__title">Computer:</div>
+          <div class="game__computer__result"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="controls__input">Rock</button>
+      <button class="controls__input">Paper</button>
+      <button class="controls__input">Scissors</button>
+    </div>
+  </body>
 </html>
